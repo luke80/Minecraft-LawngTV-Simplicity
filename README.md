@@ -3,11 +3,11 @@
 ##Simplicity Edition
 Mod List
 - 1.7.10/
--- CodeChickenLib-1.7.10-1.1.3.136-universal.jar
--- commons-codec-1.9.jar
--- commons-compress-1.8.1.jar
--- ForgeMultipart-1.7.10-1.2.0.344-universal.jar
--- MrTJPCore-1.0.8.16-universal.jar
+ - CodeChickenLib-1.7.10-1.1.3.136-universal.jar
+ - commons-codec-1.9.jar
+ - commons-compress-1.8.1.jar
+ - ForgeMultipart-1.7.10-1.2.0.344-universal.jar
+ - MrTJPCore-1.0.8.16-universal.jar
 - 1.7.10-MB_Battlegear2-Bullseye-1.0.8.0.jar
 - AdminCommandsToolbox-0.0.2a_1.7.10.jar
 - AgriCraft-1.7.10-1.3.1.jar
@@ -18,7 +18,7 @@ Mod List
 - BiblioCraft[v1.10.4][MC1.7.10].jar
 - BiblioWoods[Natura][v1.5].jar
 - carpentersblocks/
--- CarpentersBlocksCachedResources.zip
+ - CarpentersBlocksCachedResources.zip
 - Carpenter's Blocks v3.3.6 - MC 1.7.10.jar
 - Chisel2-2.3.10.37.jar
 - ChiselTones-1.7.10-1.0-1.jar
