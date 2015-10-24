@@ -131,6 +131,10 @@ public class aji {
   // access flags 0x2
   private Ljava/lang/String; b
 
+  // access flags 0x4
+  protected Lrf; L
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+
   // access flags 0x1A
   private final static Ljava/lang/String; __OBFID = "CL_00000199"
 
@@ -279,6 +283,19 @@ public class aji {
     LINENUMBER 171 L0
     ALOAD 0
     GETFIELD aji.r : I
+    IRETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x1
+  public l()Z
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 177 L0
+    ALOAD 0
+    GETFIELD aji.s : Z
     IRETURN
    L1
     LOCALVARIABLE this Laji; L0 L1 0
@@ -3755,6 +3772,31 @@ public class aji {
     MAXLOCALS = 2
 
   // access flags 0x1
+  public q()Z
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 451 L0
+    ALOAD 0
+    GETFIELD aji.J : Lawt;
+    INVOKEVIRTUAL awt.c ()Z
+    IFEQ L1
+    ALOAD 0
+    INVOKEVIRTUAL aji.d ()Z
+    IFEQ L1
+    ICONST_1
+    GOTO L2
+   L1
+   FRAME FULL [aji] []
+    ICONST_0
+   L2
+   FRAME FULL [aji] [I]
+    IRETURN
+   L3
+    LOCALVARIABLE this Laji; L0 L3 0
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x1
   public r()Z
    L0
     LINENUMBER 456 L0
@@ -3992,6 +4034,180 @@ public class aji {
     MAXLOCALS = 7
 
   // access flags 0x1
+  public c(Lahl;III)I
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 527 L0
+    ALOAD 1
+    ILOAD 2
+    ILOAD 3
+    ILOAD 4
+    INVOKEINTERFACE ahl.a (III)Laji;
+    ASTORE 5
+   L1
+    LINENUMBER 528 L1
+    ALOAD 1
+    ILOAD 2
+    ILOAD 3
+    ILOAD 4
+    ALOAD 5
+    ALOAD 1
+    ILOAD 2
+    ILOAD 3
+    ILOAD 4
+    INVOKEVIRTUAL aji.getLightValue (Lahl;III)I
+    INVOKEINTERFACE ahl.c (IIII)I
+    ISTORE 6
+   L2
+    LINENUMBER 530 L2
+    ILOAD 6
+    IFNE L3
+    ALOAD 5
+    INSTANCEOF alj
+    IFEQ L3
+   L4
+    LINENUMBER 532 L4
+    IINC 3 -1
+   L5
+    LINENUMBER 533 L5
+    ALOAD 1
+    ILOAD 2
+    ILOAD 3
+    ILOAD 4
+    INVOKEINTERFACE ahl.a (III)Laji;
+    ASTORE 5
+   L6
+    LINENUMBER 534 L6
+    ALOAD 1
+    ILOAD 2
+    ILOAD 3
+    ILOAD 4
+    ALOAD 5
+    ALOAD 1
+    ILOAD 2
+    ILOAD 3
+    ILOAD 4
+    INVOKEVIRTUAL aji.getLightValue (Lahl;III)I
+    INVOKEINTERFACE ahl.c (IIII)I
+    IRETURN
+   L3
+    LINENUMBER 538 L3
+   FRAME FULL [aji ahl I I I aji I] []
+    ILOAD 6
+    IRETURN
+   L7
+    LOCALVARIABLE this Laji; L0 L7 0
+    LOCALVARIABLE p_149677_1_ Lahl; L0 L7 1
+    LOCALVARIABLE p_149677_2_ I L0 L7 2
+    LOCALVARIABLE p_149677_3_ I L0 L7 3
+    LOCALVARIABLE p_149677_4_ I L0 L7 4
+    LOCALVARIABLE block Laji; L1 L7 5
+    LOCALVARIABLE l I L2 L7 6
+    MAXSTACK = 9
+    MAXLOCALS = 7
+
+  // access flags 0x1
+  public a(Lahl;IIII)Z
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 545 L0
+    ILOAD 5
+    IFNE L1
+    ALOAD 0
+    GETFIELD aji.C : D
+    DCONST_0
+    DCMPL
+    IFLE L1
+    ICONST_1
+    GOTO L2
+   L1
+   FRAME FULL [aji ahl I I I I] []
+    ILOAD 5
+    ICONST_1
+    IF_ICMPNE L3
+    ALOAD 0
+    GETFIELD aji.F : D
+    DCONST_1
+    DCMPG
+    IFGE L3
+    ICONST_1
+    GOTO L2
+   L3
+   FRAME FULL [aji ahl I I I I] []
+    ILOAD 5
+    ICONST_2
+    IF_ICMPNE L4
+    ALOAD 0
+    GETFIELD aji.D : D
+    DCONST_0
+    DCMPL
+    IFLE L4
+    ICONST_1
+    GOTO L2
+   L4
+   FRAME FULL [aji ahl I I I I] []
+    ILOAD 5
+    ICONST_3
+    IF_ICMPNE L5
+    ALOAD 0
+    GETFIELD aji.G : D
+    DCONST_1
+    DCMPG
+    IFGE L5
+    ICONST_1
+    GOTO L2
+   L5
+   FRAME FULL [aji ahl I I I I] []
+    ILOAD 5
+    ICONST_4
+    IF_ICMPNE L6
+    ALOAD 0
+    GETFIELD aji.B : D
+    DCONST_0
+    DCMPL
+    IFLE L6
+    ICONST_1
+    GOTO L2
+   L6
+   FRAME FULL [aji ahl I I I I] []
+    ILOAD 5
+    ICONST_5
+    IF_ICMPNE L7
+    ALOAD 0
+    GETFIELD aji.E : D
+    DCONST_1
+    DCMPG
+    IFGE L7
+    ICONST_1
+    GOTO L2
+   L7
+   FRAME FULL [aji ahl I I I I] []
+    ALOAD 1
+    ILOAD 2
+    ILOAD 3
+    ILOAD 4
+    INVOKEINTERFACE ahl.a (III)Laji;
+    INVOKEVIRTUAL aji.c ()Z
+    IFNE L8
+    ICONST_1
+    GOTO L2
+   L8
+   FRAME FULL [aji ahl I I I I] []
+    ICONST_0
+   L2
+   FRAME FULL [aji ahl I I I I] [I]
+    IRETURN
+   L9
+    LOCALVARIABLE this Laji; L0 L9 0
+    LOCALVARIABLE p_149646_1_ Lahl; L0 L9 1
+    LOCALVARIABLE p_149646_2_ I L0 L9 2
+    LOCALVARIABLE p_149646_3_ I L0 L9 3
+    LOCALVARIABLE p_149646_4_ I L0 L9 4
+    LOCALVARIABLE p_149646_5_ I L0 L9 5
+    MAXSTACK = 4
+    MAXLOCALS = 6
+
+  // access flags 0x1
   public d(Lahl;IIII)Z
    L0
     LINENUMBER 550 L0
@@ -4012,6 +4228,45 @@ public class aji {
     LOCALVARIABLE p_149747_5_ I L0 L1 5
     MAXSTACK = 4
     MAXLOCALS = 6
+
+  // access flags 0x1
+  public e(Lahl;IIII)Lrf;
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 556 L0
+    ALOAD 0
+    ILOAD 5
+    ALOAD 1
+    ILOAD 2
+    ILOAD 3
+    ILOAD 4
+    INVOKEINTERFACE ahl.e (III)I
+    INVOKEVIRTUAL aji.a (II)Lrf;
+    ARETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    LOCALVARIABLE p_149673_1_ Lahl; L0 L1 1
+    LOCALVARIABLE p_149673_2_ I L0 L1 2
+    LOCALVARIABLE p_149673_3_ I L0 L1 3
+    LOCALVARIABLE p_149673_4_ I L0 L1 4
+    LOCALVARIABLE p_149673_5_ I L0 L1 5
+    MAXSTACK = 6
+    MAXLOCALS = 6
+
+  // access flags 0x1
+  public a(II)Lrf;
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 562 L0
+    ALOAD 0
+    GETFIELD aji.L : Lrf;
+    ARETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    LOCALVARIABLE p_149691_1_ I L0 L1 1
+    LOCALVARIABLE p_149691_2_ I L0 L1 2
+    MAXSTACK = 1
+    MAXLOCALS = 3
 
   // access flags 0x1
   public a(Lahb;IIILazt;Ljava/util/List;Lsa;)V
@@ -4100,6 +4355,68 @@ public class aji {
     MAXSTACK = 14
     MAXLOCALS = 5
 
+  // access flags 0x11
+  public final h(I)Lrf;
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 583 L0
+    ALOAD 0
+    ILOAD 1
+    ICONST_0
+    INVOKEVIRTUAL aji.a (II)Lrf;
+    ARETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    LOCALVARIABLE p_149733_1_ I L0 L1 1
+    MAXSTACK = 3
+    MAXLOCALS = 2
+
+  // access flags 0x1
+  public g(Lahb;III)Lazt;
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 589 L0
+    ILOAD 2
+    I2D
+    ALOAD 0
+    GETFIELD aji.B : D
+    DADD
+    ILOAD 3
+    I2D
+    ALOAD 0
+    GETFIELD aji.C : D
+    DADD
+    ILOAD 4
+    I2D
+    ALOAD 0
+    GETFIELD aji.D : D
+    DADD
+    ILOAD 2
+    I2D
+    ALOAD 0
+    GETFIELD aji.E : D
+    DADD
+    ILOAD 3
+    I2D
+    ALOAD 0
+    GETFIELD aji.F : D
+    DADD
+    ILOAD 4
+    I2D
+    ALOAD 0
+    GETFIELD aji.G : D
+    DADD
+    INVOKESTATIC azt.a (DDDDDD)Lazt;
+    ARETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    LOCALVARIABLE p_149633_1_ Lahb; L0 L1 1
+    LOCALVARIABLE p_149633_2_ I L0 L1 2
+    LOCALVARIABLE p_149633_3_ I L0 L1 3
+    LOCALVARIABLE p_149633_4_ I L0 L1 4
+    MAXSTACK = 14
+    MAXLOCALS = 5
+
   // access flags 0x1
   public c()Z
    L0
@@ -4148,6 +4465,22 @@ public class aji {
     LOCALVARIABLE p_149674_3_ I L0 L1 3
     LOCALVARIABLE p_149674_4_ I L0 L1 4
     LOCALVARIABLE p_149674_5_ Ljava/util/Random; L0 L1 5
+    MAXSTACK = 0
+    MAXLOCALS = 6
+
+  // access flags 0x1
+  public b(Lahb;IIILjava/util/Random;)V
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 610 L0
+    RETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    LOCALVARIABLE p_149734_1_ Lahb; L0 L1 1
+    LOCALVARIABLE p_149734_2_ I L0 L1 2
+    LOCALVARIABLE p_149734_3_ I L0 L1 3
+    LOCALVARIABLE p_149734_4_ I L0 L1 4
+    LOCALVARIABLE p_149734_5_ Ljava/util/Random; L0 L1 5
     MAXSTACK = 0
     MAXLOCALS = 6
 
@@ -5208,6 +5541,18 @@ public class aji {
     MAXLOCALS = 7
 
   // access flags 0x1
+  public w()I
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 851 L0
+    ICONST_0
+    IRETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x1
   public d(Lahb;IIII)Z
    L0
     LINENUMBER 856 L0
@@ -5423,6 +5768,47 @@ public class aji {
     LOCALVARIABLE this Laji; L0 L1 0
     MAXSTACK = 2
     MAXLOCALS = 1
+
+  // access flags 0x1
+  public D()I
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 915 L0
+    LDC 16777215
+    IRETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x1
+  public i(I)I
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 921 L0
+    LDC 16777215
+    IRETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    LOCALVARIABLE p_149741_1_ I L0 L1 1
+    MAXSTACK = 1
+    MAXLOCALS = 2
+
+  // access flags 0x1
+  public d(Lahl;III)I
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 927 L0
+    LDC 16777215
+    IRETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    LOCALVARIABLE p_149720_1_ Lahl; L0 L1 1
+    LOCALVARIABLE p_149720_2_ I L0 L1 2
+    LOCALVARIABLE p_149720_3_ I L0 L1 3
+    LOCALVARIABLE p_149720_4_ I L0 L1 4
+    MAXSTACK = 1
+    MAXLOCALS = 5
 
   // access flags 0x1
   public b(Lahl;IIII)I
@@ -5897,6 +6283,27 @@ public class aji {
     MAXLOCALS = 1
 
   // access flags 0x1
+  public I()F
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 1052 L0
+    ALOAD 0
+    INVOKEVIRTUAL aji.q ()Z
+    IFEQ L1
+    LDC 0.2
+    GOTO L2
+   L1
+   FRAME FULL [aji] []
+    FCONST_1
+   L2
+   FRAME FULL [aji] [F]
+    FRETURN
+   L3
+    LOCALVARIABLE this Laji; L0 L3 0
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x1
   public a(Lahb;IIILsa;F)V
    L0
     LINENUMBER 1055 L0
@@ -5911,6 +6318,23 @@ public class aji {
     LOCALVARIABLE p_149746_6_ F L0 L1 6
     MAXSTACK = 0
     MAXLOCALS = 7
+
+  // access flags 0x1
+  public d(Lahb;III)Ladb;
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 1060 L0
+    ALOAD 0
+    INVOKESTATIC adb.a (Laji;)Ladb;
+    ARETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    LOCALVARIABLE p_149694_1_ Lahb; L0 L1 1
+    LOCALVARIABLE p_149694_2_ I L0 L1 2
+    LOCALVARIABLE p_149694_3_ I L0 L1 3
+    LOCALVARIABLE p_149694_4_ I L0 L1 4
+    MAXSTACK = 1
+    MAXLOCALS = 5
 
   // access flags 0x1
   public k(Lahb;III)I
@@ -5932,6 +6356,31 @@ public class aji {
     LOCALVARIABLE p_149643_4_ I L0 L1 4
     MAXSTACK = 5
     MAXLOCALS = 5
+
+  // access flags 0x1
+  public a(Ladb;Labt;Ljava/util/List;)V
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 1071 L0
+    ALOAD 3
+    NEW add
+    DUP
+    ALOAD 1
+    ICONST_1
+    ICONST_0
+    INVOKESPECIAL add.<init> (Ladb;II)V
+    INVOKEINTERFACE java/util/List.add (Ljava/lang/Object;)Z
+    POP
+   L1
+    LINENUMBER 1072 L1
+    RETURN
+   L2
+    LOCALVARIABLE this Laji; L0 L2 0
+    LOCALVARIABLE p_149666_1_ Ladb; L0 L2 1
+    LOCALVARIABLE p_149666_2_ Labt; L0 L2 2
+    LOCALVARIABLE p_149666_3_ Ljava/util/List; L0 L2 3
+    MAXSTACK = 6
+    MAXLOCALS = 4
 
   // access flags 0x1
   public a(Labt;)Laji;
@@ -5967,6 +6416,19 @@ public class aji {
     MAXLOCALS = 7
 
   // access flags 0x1
+  public J()Labt;
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 1085 L0
+    ALOAD 0
+    GETFIELD aji.a : Labt;
+    ARETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    MAXSTACK = 1
+    MAXLOCALS = 1
+
+  // access flags 0x1
   public f(Lahb;IIII)V
    L0
     LINENUMBER 1088 L0
@@ -5994,6 +6456,18 @@ public class aji {
     LOCALVARIABLE p_149639_4_ I L0 L1 4
     MAXSTACK = 0
     MAXLOCALS = 5
+
+  // access flags 0x1
+  public K()Z
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 1095 L0
+    ICONST_0
+    IRETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    MAXSTACK = 1
+    MAXLOCALS = 1
 
   // access flags 0x1
   public L()Z
@@ -6113,6 +6587,90 @@ public class aji {
     LOCALVARIABLE p_149658_1_ Ljava/lang/String; L0 L2 1
     MAXSTACK = 2
     MAXLOCALS = 2
+
+  // access flags 0x4
+  protected N()Ljava/lang/String;
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 1137 L0
+    ALOAD 0
+    GETFIELD aji.d : Ljava/lang/String;
+    IFNONNULL L1
+    NEW java/lang/StringBuilder
+    DUP
+    INVOKESPECIAL java/lang/StringBuilder.<init> ()V
+    LDC "MISSING_ICON_BLOCK_"
+    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+    ALOAD 0
+    INVOKESTATIC aji.b (Laji;)I
+    INVOKEVIRTUAL java/lang/StringBuilder.append (I)Ljava/lang/StringBuilder;
+    LDC "_"
+    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+    ALOAD 0
+    GETFIELD aji.b : Ljava/lang/String;
+    INVOKEVIRTUAL java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+    INVOKEVIRTUAL java/lang/StringBuilder.toString ()Ljava/lang/String;
+    GOTO L2
+   L1
+   FRAME FULL [aji] []
+    ALOAD 0
+    GETFIELD aji.d : Ljava/lang/String;
+   L2
+   FRAME FULL [aji] [java/lang/String]
+    ARETURN
+   L3
+    LOCALVARIABLE this Laji; L0 L3 0
+    MAXSTACK = 2
+    MAXLOCALS = 1
+
+  // access flags 0x1
+  public b(II)Lrf;
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 1143 L0
+    ALOAD 0
+    ILOAD 1
+    ILOAD 2
+    INVOKEVIRTUAL aji.a (II)Lrf;
+    ARETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    LOCALVARIABLE p_149735_1_ I L0 L1 1
+    LOCALVARIABLE p_149735_2_ I L0 L1 2
+    MAXSTACK = 3
+    MAXLOCALS = 3
+
+  // access flags 0x1
+  public a(Lrg;)V
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 1149 L0
+    ALOAD 0
+    ALOAD 1
+    ALOAD 0
+    INVOKEVIRTUAL aji.N ()Ljava/lang/String;
+    INVOKEINTERFACE rg.a (Ljava/lang/String;)Lrf;
+    PUTFIELD aji.L : Lrf;
+   L1
+    LINENUMBER 1150 L1
+    RETURN
+   L2
+    LOCALVARIABLE this Laji; L0 L2 0
+    LOCALVARIABLE p_149651_1_ Lrg; L0 L2 1
+    MAXSTACK = 3
+    MAXLOCALS = 2
+
+  // access flags 0x1
+  public O()Ljava/lang/String;
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 1155 L0
+    ACONST_NULL
+    ARETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    MAXSTACK = 1
+    MAXLOCALS = 1
 
   // access flags 0x1
   public getLightValue(Lahl;III)I
@@ -7344,6 +7902,39 @@ public class aji {
     LOCALVARIABLE z I L0 L1 4
     MAXSTACK = 1
     MAXLOCALS = 5
+
+  // access flags 0x1
+  public addHitEffects(Lahb;Lazu;Lbkn;)Z
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 1837 L0
+    ICONST_0
+    IRETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    LOCALVARIABLE worldObj Lahb; L0 L1 1
+    LOCALVARIABLE target Lazu; L0 L1 2
+    LOCALVARIABLE effectRenderer Lbkn; L0 L1 3
+    MAXSTACK = 1
+    MAXLOCALS = 4
+
+  // access flags 0x1
+  public addDestroyEffects(Lahb;IIIILbkn;)Z
+  @Lcpw/mods/fml/relauncher/SideOnly;(value=Lcpw/mods/fml/relauncher/Side;.CLIENT)
+   L0
+    LINENUMBER 1857 L0
+    ICONST_0
+    IRETURN
+   L1
+    LOCALVARIABLE this Laji; L0 L1 0
+    LOCALVARIABLE world Lahb; L0 L1 1
+    LOCALVARIABLE x I L0 L1 2
+    LOCALVARIABLE y I L0 L1 3
+    LOCALVARIABLE z I L0 L1 4
+    LOCALVARIABLE meta I L0 L1 5
+    LOCALVARIABLE effectRenderer Lbkn; L0 L1 6
+    MAXSTACK = 1
+    MAXLOCALS = 7
 
   // access flags 0x1
   public canSustainPlant(Lahl;IIILnet/minecraftforge/common/util/ForgeDirection;Lnet/minecraftforge/common/IPlantable;)Z
