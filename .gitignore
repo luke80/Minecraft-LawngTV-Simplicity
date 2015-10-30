@@ -57,3 +57,14 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+*.curseclient
+config/Schematica.cfg
+journeymap/data/*
+journeymap/icon/*
+logs
+*.log
+saves
+servers.dat
+options.txt
+config/NEI/client.cfg
